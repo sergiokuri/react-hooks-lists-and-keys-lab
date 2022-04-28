@@ -1,13 +1,20 @@
 import React from "react";
+import RenTech from "./RenTech.js"
 
 function ProjectItem({ name, about, technologies }) {
+  
+  
   return (
     <div className="project-item">
+      <rentech tech={"yep"}/>
       <h3>{name}</h3>
       <p>{about}</p>
       <div className="technologies">
-        {/* render a <span> for each technology in the technologies array */}
       </div>
+      {technologies.map((object)=>{
+   return <RenTech tech={object}/>
+  })}
+      
     </div>
   );
 }
